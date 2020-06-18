@@ -18,8 +18,22 @@ def trapezoid(f,a,b,step):
     for datapoint in range(1,n): # Add the rest value of sumation series
         sum += 2*f(x[datapoint])
     integ = (dx/2)*sum # Calculate the integral approximaiton
-    print(integ)
+    print("%.5f" %integ) # Print calculated integral approximation (%.5f)
 
-f = lambda x: (np.sin(x))
+# Define the function
+f = lambda x: (1/(1+x))
 
-trapezoid(f,0,1,0.001)
+#Lets try out trapezoid rule with different steps size
+# h = 0.5
+trapezoid(f,0,1,0.5)
+# Output => 0.55556
+# h = 0.25
+trapezoid(f,0,1,0.25)
+# Output => 0.60762
+# h = 0.125
+trapezoid(f,0,1,0.125)
+# Output => 0.64477
+'''
+The real value of the function is ln(2) or approximately 0.69315
+As you can see smaller the steps the better is approximation
+'''
