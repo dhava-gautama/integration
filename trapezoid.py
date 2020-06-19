@@ -14,7 +14,7 @@ def trapezoid(f,a,b,step):
     x = np.arange(a,b+step,step) # Create array List of point between (a,b)
     n = len(x) # Returns the number of items in x array
     dx = (b-a)/(n-1) # Find value of dx
-    sum = f(x[0]) # First value of sumation series
+    sum = f(x[0]) + f(x[-1]) # First value of sumation series
     for datapoint in range(1,n): # Add the rest value of sumation series
         sum += 2*f(x[datapoint])
     integ = (dx/2)*sum # Calculate the integral approximaiton
