@@ -11,7 +11,7 @@ a,b  : interval (a,b)
 step : subsinterval size between (a,b)
 '''
 def trapezoid(f,a,b,step):
-    x = np.arange(a,b+step,step) # Create array List of point between (a,b)
+    x = np.arange(a,b,step) # Create array List of point between (a,b)
     n = len(x) # Returns the number of items in x array
     dx = (b-a)/(n-1) # Find value of dx
     sum = f(x[0]) + f(x[-1]) # First value of sumation series
